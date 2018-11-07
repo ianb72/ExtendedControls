@@ -1,0 +1,129 @@
+.captcha-container {
+
+    @mixin captcha-button {
+        display: inline-block;
+        padding: 10px;
+        padding-top: 20px;
+        border: 3px solid #999;
+        height: 100px;
+        width: 45%;
+        max-width: 200px;
+        border-radius: 10px;
+        text-align: center;
+        margin: 10px;
+
+        &:hover {
+            cursor: pointer;
+
+        }
+
+        &:hover:not(.disabled) {
+            background: lighten(#ff6a00, 25%);
+            border-color: #ff6a00;
+        }
+
+        &.disabled {
+            cursor: not-allowed;
+            background: #555;
+            border-color: #999;
+            color: #444;
+        }
+
+        .captcha-icon {
+            margin-top: 10px;
+        }
+    }
+
+    .btn-confirm,
+    .btn-continue {
+        @include captcha-button();
+    }
+
+    .btn-continue {
+        background: lighten(#0f0, 20%);
+        border-color: #0f0;
+        color: darken(#0f0, 20%);
+        font-weight: bold;
+
+        &:hover:not(.disabled) {
+            color: #ff6a00;
+        }
+    }
+
+
+}
+
+// .captcha-container {
+//     border: 1px dashed #f00;
+//     width: 50%;
+//     height: 120px;
+//     padding-top: 10px;
+
+//     @mixin captcha-button {
+//         display: inline-block;
+//         padding: 10px;
+//         padding-top: 20px;
+//         border: 3px solid #999;
+//         height: 100px;
+//         width: 45%;
+//         max-width: 200px;
+//         border-radius: 10px;
+
+//         &:hover {
+//             cursor: pointer;
+//         }
+
+//         .btn-text {
+//             text-align: center;
+//         }
+
+//         .captcha-icon {
+//             text-align: center;
+//             height: 40px;
+//             margin-top: -15px;
+
+//             &:after {
+//                 font-size: 36px;
+//                 font-family: AS-iconset;
+//                 content: "\e900";
+//             }
+//         }
+//     }
+
+//     .captcha-button {
+//         @include captcha-button;
+
+//         &.btn-confirm {
+//             background: #ccc;
+
+//             &:hover:not(.disabled) {
+//                 background: lighten(#ff6a00, 25%);
+//                 border-color: #ff6a00;
+//             }
+//         }
+
+//         &.btn-continue {
+//             top: -10px;
+//         }
+
+//         &.btn-continue:not(.disabled) {
+//             background: lighten(#0f0, 25%);
+//             color: #050;
+//             border-color: #0f0;
+//             margin-left: 10px;
+
+//             &:hover {
+//                 background: lighten(#ff6a00, 25%);
+//                 border-color: #ff6a00;
+//                 color: darken(#ff6a00, 10%);
+//             }
+//         }
+
+//         &.disabled {
+//             cursor: not-allowed;
+//             background: #555;
+//             border: #999;
+//             color: #444;
+//         }
+//     }
+// }

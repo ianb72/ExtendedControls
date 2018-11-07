@@ -1,0 +1,73 @@
+@import "BaseColours.less";
+@import "Defaults.less";
+.grouped-buttons {
+    width: 100%;
+    height: @sb-default-height + 10px;
+    .selection-button {
+        &.inline {
+            display: inline-block;
+        }
+        &.active {
+            .selection-button-outer {
+                border: @sb-button-border-width solid @sb-button-active-colour;
+                border-width: (@sb-button-border-width * 1.5);
+            }
+        }
+        &.small {
+            .selection-button-outer {
+                width: @sb-default-width / 2;
+                height: @sb-default-height /2;
+                padding-bottom: 4px;
+            }
+        }
+        .selection-button-outer {
+            .default-border;
+            width: @sb-default-width;
+            height: @sb-default-height;
+            background: lighten(@default-theme-colour, 43%);
+            padding-top: 2px;
+            &.invalid-input {
+                background: #fbb;
+            }
+            .button-title {
+                font-size: @sb-button-font-size;
+                height: 25%;
+                text-align: center;
+            }
+            .button-icon {
+                text-align: center;
+                height: 50%;
+                width: 100%;
+                padding-top: 5%;
+                icon {
+                    &.glyphicon {
+                        font-size: 24px;
+                        margin-top: -5px;
+                    }
+                }
+            }
+            .button-text {
+                font-size: @sb-button-font-size;
+                padding-top: 5%;
+                text-align: center;
+                height: 25%;
+            }
+            &:hover {
+                background: @sb-button-hover-colour;
+                border: @sb-button-border-width solid darken(@sb-button-hover-colour, 10%);
+                border-width: (@sb-button-border-width * 1.5);
+                cursor: pointer;
+            }
+        }
+        &.disabled {
+            .selection-button-outer {
+                background: lighten(@default-theme-colour, 30%);
+                &:hover {
+                    .default-border;
+                    .thin-border;
+                    cursor: not-allowed;
+                }
+            }
+        }
+    }
+}

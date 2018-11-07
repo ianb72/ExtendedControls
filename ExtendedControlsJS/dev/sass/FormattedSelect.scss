@@ -1,0 +1,89 @@
+@import "Defaults.scss";
+.formatted-select {
+    @include set-control-width($fs-default-width);
+    height: $fs-default-height;
+    border: $fs-default-border;
+    border-radius: $fs-default-border-radius;
+    &.expanded {
+        @include flat-bottom-border;
+        border-bottom: none;
+    }
+    .selected-item {
+        padding: 10px 0 3px 4px;
+        height: $fs-default-height;
+        .selection-item-text {
+            font-weight: normal;
+        }
+        .selection-item-value {
+            &:before {
+                content: ' (';
+            }
+            &:after {
+                content: ')';
+            }
+        }
+        &:hover {
+            cursor: pointer;
+        }
+        &.expanded {
+            &:after {
+                font-family: FontAwesome;
+                float: right;
+                margin-right: 4px;
+                content: '\f077';
+            }
+        }
+        &.collapsed {
+            &:after {
+                font-family: FontAwesome;
+                float: right;
+                margin-right: 4px;
+                content: '\f078';
+            }
+        }
+    }
+    .selection-items {
+        position: relative;
+        background: $fs-selection-items-background;
+        border: $fs-selection-items-border;
+        padding-bottom: 0px;
+        margin-top: -41px;
+        margin-left: -1px;
+        top: $fs-default-height;
+        width: $fs-default-width;
+        @include flat-top-border;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li {
+                .selection-item {
+                    text-align: center;
+                    border-bottom: $fs-selection-item-border-bottom;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    .selection-item-text {
+                        font-weight: normal;
+                    }
+                    .selection-item-value {
+                        &:before {
+                            content: '(';
+                        }
+                        &:after {
+                            content: ')';
+                        }
+                    }
+                }
+                &:hover {
+                    background: #999;
+                    cursor: pointer;
+                }
+                &:last-child {
+                    .selection-item {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+}

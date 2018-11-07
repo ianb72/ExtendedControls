@@ -1,0 +1,32 @@
+.cp-container {
+    padding-bottom: 5px;
+
+    .cp-header {
+        padding: 5px;
+        height: $cp-header-row-height;
+        font-size: $cp-header-font-size;
+        border-bottom: 2px solid $cp-base-border-colour;
+        margin: 0 0 10px 0px;
+        min-height: 32px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .panel-collapse {
+        border: 1px solid $cp-base-border-colour;
+        border-radius: $default-border-radius;
+        background: $cp-base-panel-background;
+
+        padding: 10px;
+
+        &.collapsed {
+            /*Place holder*/
+        }
+
+        &.expanded {
+            /*Place holder*/
+        }
+    }
+}

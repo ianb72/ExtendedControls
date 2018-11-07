@@ -1,0 +1,22 @@
+img,
+.map-container,
+.extended-map,
+.map-svg,
+.area-info-overlay {
+    padding: 0;
+    margin-left: 0;
+}
+
+.area-info-panel {
+    display: none;
+}
+
+circle,
+polygon,
+rect {
+    stroke: #000 !important;
+}
+
+.map-container {
+    height: 1500px;
+}

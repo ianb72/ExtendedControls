@@ -1,0 +1,96 @@
+@import "Theme.scss";
+@import "Defaults.scss";
+
+.grouped-buttons {
+    display: flex;
+    flex-direction: row;
+
+    .selection-button {
+        width: $sb-default-width;
+        height: $sb-default-height;
+        margin-right: $sb-default-horiz-spacing;
+        margin-bottom: $sb-default-vert-spacing;
+        padding: 1px;
+
+        &.active {
+            .selection-button-outer {
+                border: $sb-button-border-width solid $sb-button-active-colour;
+                border-width: ($sb-button-border-width * 1.5);
+            }
+        }
+
+        &.small {
+            .selection-button-outer {
+                width: $sb-default-width / 2;
+                height: $sb-default-height /2;
+                padding-bottom: 4px;
+            }
+        }
+
+        .selection-button-outer {
+            display: flex;
+            flex-direction: column;
+            border: $default-border;
+            border-width: 3px;
+            width: $sb-default-width;
+            height: $sb-default-height;
+            background: lighten($default-theme-colour, 43%);
+
+            &.round {
+                border-radius: 50%;
+                padding-top: 5px;
+            }
+
+            &.invalid-input {
+                background: #fbb;
+            }
+
+            .button-title {
+                width: 100%;
+                font-size: $sb-button-font-size;
+                height: 25%;
+                text-align: center;
+            }
+
+            .button-icon {
+                text-align: center;
+                height: 50%;
+                width: 100%;
+                padding-top: 5%;
+
+                icon {
+                    &.glyphicon {
+                        font-size: 24px;
+                        margin-top: -5px;
+                    }
+                }
+            }
+
+            .button-text {
+                width: 100%;
+                font-size: $sb-button-font-size;
+                padding-top: 5%;
+                text-align: center;
+                min-height: 25%;
+            }
+
+            &:hover {
+                background: $sb-button-hover-colour;
+                border: $sb-button-border-width solid darken($sb-button-hover-colour, 10%);
+                border-width: ($sb-button-border-width * 1.5);
+                cursor: pointer;
+            }
+        }
+
+        &.disabled {
+            .selection-button-outer {
+                background: lighten($default-theme-colour, 30%);
+
+                &:hover {
+                    @include default-border; //@include thin-border;
+                    cursor: not-allowed;
+                }
+            }
+        }
+    }
+}

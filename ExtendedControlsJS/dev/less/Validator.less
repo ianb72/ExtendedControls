@@ -1,0 +1,24 @@
+@invalid-input-colour: #f44;
+@valid-input-colour: #0f0;
+@message-container-height: 25px;
+.validated-input {
+    margin-bottom: 10px;
+    .invalid-input {
+        background: lighten(@invalid-input-colour, 25%);
+        color: @invalid-input-colour;
+        border: 1px solid @invalid-input-colour;
+    }
+    .valid-input {
+        background: lighten(@valid-input-colour, 35%);
+        color: darken(@valid-input-colour, 20%);
+        border: 1px solid @valid-input-colour;
+    }
+    .validation-message {
+        margin-top: 3px;
+        min-height: @message-container-height !important;
+        max-height: @message-container-height !important;
+        .warning-text {
+            font-size: 12px !important;
+        }
+    }
+}

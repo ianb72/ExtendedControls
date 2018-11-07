@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Testing</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="content/ExtendedControls.css">
+    <link rel="stylesheet" type="text/css" href="content/testing.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script src="scripts/watch.js"></script>
+    <script src="scripts/ec_binder.js"></script>
+
+</head>
+
+<body style="padding: 20px">
+    <div id="testcontrol"></div>
+    <div ec-bind-model="tm">
+        <div ec-bind-text="TestVar"></div>
+        <div ec-bind-text="Test2"></div>
+        <input ec-bind-value="Test2" type="text" />
+        <div ec-bind-text="ArrayTest"></div>
+        <div ec-bind-foreach="ArrayTest">
+            <div ec-bind-text="value"></div>
+        </div>
+    </div>
+    <div ec-bind-model="tm2">
+        <h3 ec-bind-text="TestVar"></h3>
+        <div ec-bind-html="TestHTML"></div>
+    </div>
+</body>
+
+<script src="../content/ExtendedControls_IE.js"></script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/testing.js"></script>
+
+</html>

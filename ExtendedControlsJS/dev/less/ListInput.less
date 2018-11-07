@@ -1,0 +1,49 @@
+.boundlist-inner {
+    margin-bottom: 10px;
+    .list-limit-error {
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+    .btn.btn-list {
+        @btn-text-top-offset: (@list-input-button-height * 0.60);
+        font-size: @list-input-button-font-size;
+        float: right;
+        margin-left: @list-input-button-spacing-left;
+        width: @list-input-button-width;
+        height: @list-input-button-height;
+        padding: 0;
+        padding-top: (-@list-input-button-font-size) + @btn-text-top-offset  !important;
+        &.btn-list-add {
+            background: @default-action-button-background;
+            border-color: @default-action-button-border;
+            border-width: @default-action-button-border-width;
+            color: @default-action-button-color;
+            border-radius: 7px;
+            &:hover {
+                border-color: #f00;
+            }
+        }
+        &.btn-list-remove {
+            background: @alt-action-button-background;
+            border-color: @alt-action-button-border;
+            border-width: @alt-action-button-border-width;
+            color: @alt-action-button-color;
+            border-radius: 7px;
+            &:hover {
+                border-color: #f00;
+            }
+        }
+    }
+    .input-group {
+        .input-field {
+            .set-control-width(@list-input-ip-width);
+        }
+    }
+    .textbox {
+        margin-top: 7px;
+        margin-bottom: 5px !important;
+        .textbox-text {
+            .set-control-width(@list-textbox-data-width);
+        }
+    }
+}

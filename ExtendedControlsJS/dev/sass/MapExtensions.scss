@@ -1,0 +1,129 @@
+/*Map Extensions*/
+
+$map-area-outline: #00f;
+$map-area-base-fill: transparent;
+$map-area-hover-outline: #f00;
+$map-area-hover-fill: #f00;
+$map-area-hover-opacity: 0.5;
+$map-left-pos: 0;
+$map-top-pos: 0;
+
+.extended-map,
+.map-svg,
+img,
+.area-info-overlay {
+    margin-left: $map-left-pos;
+    margin-top: $map-top-pos;
+}
+
+.map-control-panel {
+    z-index: 60;
+    left: 10px;
+    top: 10px;
+    position: absolute;
+    background: #999;
+    opacity: 0.7;
+    height: 50px;
+    width: 110px;
+    border-radius: 25px;
+    padding-left: 18px;
+    padding-top: 5px;
+
+    .ctrl-btn {
+        display: inline-block;
+        border: 2px solid #fff;
+        background: #444;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        margin-right: 5px;
+
+        span {
+            color: #fff;
+            margin-left: 10px;
+            font-size: 32px;
+        }
+
+        &.ctrl-out {
+            span {
+                margin-left: 12px;
+                margin-top: -2px;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: orangered;
+        }
+    }
+
+    .current-zoom-text {
+        width: 70px;
+        height: 18px;
+        background: #999;
+        margin-top: 10px;
+        margin-left: 10px;
+        text-align: center;
+        border-radius: 10px;
+    }
+}
+
+.extended-map {
+    overflow: auto;
+    padding: 0;
+
+    img {
+        z-index: -1;
+        position: absolute;
+        left: 0;
+    }
+
+    .map-svg {
+        z-index: 50;
+        position: absolute;
+        stroke: $map-area-outline;
+        stroke-width: 2;
+        left: 0;
+
+        circle,
+        polygon,
+        rect {
+            fill: transparent;
+            stroke: $map-area-outline;
+            stroke-width: 1;
+            opacity: 1;
+
+            &:hover {
+                stroke: $map-area-hover-outline;
+                fill: $map-area-hover-fill !important;
+                opacity: $map-area-hover-opacity;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .area-info-overlay {
+        position: absolute;
+        left: 0;
+        background: transparent;
+        z-index: 40;
+
+        &.hidden {
+            .area-info-panel {
+                display: none;
+            }
+        }
+
+        .area-info-panel {
+            padding: 0;
+            position: absolute;
+            font-size: 6px;
+            background: #555;
+            color: #fff;
+            max-width: 50px;
+            white-space: normal;
+            text-align: center;
+            border: 1px solid #000;
+        }
+    }
+}

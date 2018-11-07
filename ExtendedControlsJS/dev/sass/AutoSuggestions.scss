@@ -1,0 +1,32 @@
+$suggestions-list-border: #999;
+
+.input-with-suggestions-container {
+    input {
+        border: 1px solid #999;
+        background: none;
+    }
+
+    .suggestion-overlay {
+        color: #999;
+        position: relative;
+        left: 2px;
+        top: 2px;
+        z-index: -1;
+    }
+
+    .suggestion-list {
+        border: 1px solid $suggestions-list-border;
+        height: 200px;
+        width: auto;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            padding-left: 2px;
+
+            li {
+                border-bottom: 1px dashed #999;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../content/ExtendedControls.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../content/map.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+</head>
+
+<body>
+    <div class="map-container">
+        <div class="extended-map" id="maptest">
+            <img src="../content/images/braeheadlower2.png">
+            <map name="map">
+                <area shape="poly" coords="122, 366, 219, 366, 219, 377, 228, 377, 228, 394, 218, 394, 218, 405, 122, 405"
+                    title="Krispy Kreme" />
+                <area shape="rect" coords="301, 141, 370, 170" title="Halfords" params='{"units":"F"}' />
+                <area shape="poly" coords="286, 36, 371, 36, 370, 141, 301, 141, 301, 120, 290, 120, 290, 82, 286, 82"
+                    title="Currys PC World" params='{"units":"G,H,I"}' />
+                <area shape="rect" coords="288, 170, 370, 191" title="Laura Ashley Home" params='{"units":"E"}' />
+                <area shape="rect" coords="288, 191, 370, 211" title="David's Bridal" params='{"units":"D2"}' />
+                <area shape="rect" coords="288, 211, 370, 231" title="Pagazzi" params='{"units":"D1"}' />
+                <area shape="rect" coords="301, 231, 370, 258" title="Harry Corry Textiles" params='{"units":"C"}' />
+                <area shape="rect" coords="301, 258, 370, 285" title="Harveys" params='{"units":"B"}' />
+                <area shape="rect" coords="286, 285, 370, 325" title="Next Home" params='{"units":"A"}' />
+                <area shape="rect" coords="433, 1256, 690, 1552" title="Primark Temp" params='{"units":"1A"}' />
+                <area shape="rect" coords="510, 62, 810, 112" title="Sainsbury's" params='{units":""}' />
+                <area shape="poly" coords="815, 149, 852, 140, 871, 212, 833, 221" />
+                <area shape="poly" coords="678, 286, 860, 286, 866, 279, 881, 278, 902, 299, 902, 313, 892, 322, 893, 533, 667, 534, 641, 508, 641, 482, 633, 474, 633, 347, 642, 339, 642, 321, 634, 313, 633, 300, 657, 278, 670, 278"
+                    title="M & S" params='{"units":"49"}' />
+                <area shape="poly" coords="506, 287, 521, 286, 545, 284, 564, 285, 577, 289, 587, 299, 592, 306, 592, 338, 603, 349, 604, 354, 398, 353, 408, 345, 417, 338, 429, 329, 440, 322, 449, 318, 463, 311, 476, 307, 490, 303, 502, 299, 508, 298"
+                    title="Poundland" params='{"units":"48"}' />
+                <area shape="poly" coords="440, 385, 440, 411, 398, 411, 398, 354, 604, 354, 604, 385" title='Waterstones'
+                    params='{"units":"47"}' />
+                <area shape="poly" coords="441, 385, 441, 411, 488, 410, 488, 419, 600, 418, 600, 412, 604, 407, 604, 385"
+                    title="Argos" params='{"units":"46"}' />
+                <area shape="poly" coords="488, 418, 600, 418, 600, 475, 592, 483, 503, 484, 503, 463, 509, 463, 509, 459, 514, 459, 514, 447, 487, 447"
+                    title="Superdrug" unit="45" params='{"units":"45"}' />
+            </map>
+        </div>
+    </div>
+    <footer>Test Footer</footer>
+</body>
+
+<script src="scripts/polyfill.js"></script>
+<script src="content/ExtendedControls_IE.js"></script>
+<script src="../scripts/map.js"></script>
+
+</html>

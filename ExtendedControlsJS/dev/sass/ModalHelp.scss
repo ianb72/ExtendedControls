@@ -1,0 +1,74 @@
+/*Modal Help */
+
+.ec-help-modal {
+
+    .hidden {
+        display: none !important;
+    }
+
+    .shown {
+        display: block !important;
+    }
+
+    .modal-dialog {
+        position: fixed;
+        top: 33%;
+        left: 33%;
+        z-index: 9999;
+        outline: 0 !important;
+        box-shadow: 0 !important;
+        background: transparent;
+
+        .modal-content {
+            outline: 0 !important;
+            box-shadow: 0 !important;
+            background: $modal-default-background;
+            border-bottom-right-radius: $default-border-radius;
+            border-bottom-left-radius: $default-border-radius;
+
+            .modal-body {
+                background: #fff;
+
+                iframe {
+                    margin: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: 1px solid $modal-internal-border-colour;
+                    border-radius: 4px;
+                }
+            }
+
+            .modal-header {
+                border-bottom: 1px solid $modal-internal-border-colour;
+                padding: 2px;
+
+                icon {
+                    width: 30px;
+                    font-size: 24px;
+                }
+
+                h4 {
+                    display: inline;
+                    position: absolute;
+                    top: 5px;
+                    font-weight: normal;
+                    font-size: $modal-title-font-size;
+                }
+
+                .close {
+                    margin-top: 2px;
+                    margin-right: 4px;
+                }
+
+                &:hover {
+                    cursor: move;
+                }
+            }
+        }
+
+        .modal-footer {
+            background: #f00;
+            height: 30px;
+        }
+    }
+}

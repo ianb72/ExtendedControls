@@ -1,0 +1,30 @@
+@import "BaseColours.less";
+.as-social-media-container {
+    background: @as-standard-dark;
+    border-radius: 5px;
+    height: 40px !important;
+    padding: 0;
+    padding-left: 15px;
+    padding-top: 5px;
+    float: right;
+    width: 180px;
+    .social-media-standalone {
+        border-radius: 5px;
+        &.hide-title {
+            .title {
+                display: none !important;
+            }
+        }
+        .icon {
+            margin-left: 5px;
+            margin-right: 5px;
+            background: @as-standard-dark;
+            color: @as-standard-light;
+            font-size: 32px;
+            &:hover {
+                color: #f00;
+                cursor: pointer;
+            }
+        }
+    }
+}

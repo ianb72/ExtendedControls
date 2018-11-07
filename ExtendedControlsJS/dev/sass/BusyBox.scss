@@ -1,0 +1,63 @@
+@import "Defaults.scss";
+/*Busy Box*/
+
+.busy-box {
+    border: $bb-default-border;
+    min-width: $bb-default-width;
+    background: $bb-background-colour;
+    color: $bb-foreground-colour;
+    max-width: 200px;
+    text-align: center;
+    padding: 5px;
+    padding-bottom: 0px;
+    margin: 20px auto 20px auto;
+    .row {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        height: $bb-default-row-height;
+    }
+    .busy-text {
+        p {
+            width: 100%;
+            text-align: center;
+        }
+        text-align: center !important;
+        font-size: $bb-font-size;
+        margin-top: 15px;
+        height: 30px;
+    }
+    .busy-title {
+        p {
+            width: 100%;
+            text-align: center;
+        }
+        text-align: center !important;
+        font-size: $bb-font-size+2px;
+        font-weight: bold;
+    }
+    .busy-icon {
+        text-align: center;
+        width: 32px;
+        height: 32px;
+    }
+    &.please-wait {
+        height: $bb-default-row-height + 2px;
+        .busy-text {
+            display: none;
+        }
+        .busy-title {
+            float: left;
+            margin-top: 6px;
+            margin-left: 0px;
+            height: $bb-default-row-height/2 !important;
+        }
+        .busy-icon {
+            float: right;
+        }
+    }
+    &.inverse {
+        background: $bb-foreground-colour;
+        color: $bb-background-colour;
+    }
+}

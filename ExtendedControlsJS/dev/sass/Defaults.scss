@@ -1,0 +1,180 @@
+/*Sizes*/
+$default-row-height: 40px;
+$default-label-container-width: 300px;
+$default-data-container-width: 300px;
+$default-control-width: ($default-label-container-width + $default-data-container-width);
+/*Colours*/
+$default-theme-colour: #777; //Note this should be a dark/mid colour
+$default-border-colour: lighten($default-theme-colour, 20%);
+$default-background-colour: lighten($default-theme-colour, 25%);
+$default-light-background: lighten($default-theme-colour, 50%);
+$default-mid-background: lighten($default-theme-colour, 35%);
+$default-dark-background: darken($default-theme-colour, 10%);
+$default-text-colour: #000;
+$default-icon-colour: #000;
+/*Buttons*/
+$default-button-background: $default-mid-background;
+/*Action Buttons*/
+$default-action-button-background: #090;
+$default-action-button-border: lighten($default-action-button-background, 25%);
+$default-action-button-color: #fff;
+$default-action-button-border-width: 2px;
+$alt-action-button-background: rgb(253, 101, 0);
+$alt-action-button-border: lighten($alt-action-button-background, 25%);
+$alt-action-button-color: #fff;
+$alt-action-button-border-width: 2px;
+/*Borders*/
+$default-border-radius: 4px;
+$default-border-width: 1px;
+$default-border-style: solid;
+$default-border: $default-border-width $default-border-style $default-border-colour;
+$thin-border: $default-border-width $default-border-style $default-border-colour;
+/*Fonts*/
+$default-font-size: 12px;
+/*Busy Box*/
+$bb-font-size: 12px;
+$bb-background-colour: #dedede;
+$bb-foreground-colour: #000;
+$bb-border-colour: #666;
+$bb-default-border: $default-border;
+$bb-border-width: $default-border-width;
+$bb-border-style: $default-border-style;
+$bb-border-radius: $default-border-radius;
+$bb-default-border: $bb-border-width $bb-border-style $bb-border-colour;
+$bb-default-width: 150px;
+$bb-default-row-height: $default-row-height;
+/*Formatted Select*/
+$fs-default-width: 300px;
+$fs-default-height: $default-row-height;
+$fs-default-border-radius: $default-border-radius;
+$fs-default-border: $default-border;
+$fs-selection-items-background: $default-light-background;
+$fs-selection-items-border: $default-border;
+$fs-selection-item-border-bottom: $default-border;
+/*Formatted Text*/
+$ft-input-default-width: 200px;
+$ft-input-default-height: 32px;
+$ft-text-default-font-size: 14px;
+$ft-text-top-offset: ($ft-input-default-height * 0.60);
+$ft-default-border-colour: $default-border-colour;
+$ft-input-default-border: 1px solid $ft-default-border-colour;
+/*Input Panel*/
+$ip-addon-default-border: $default-border;
+$ip-addon-default-background: $default-light-background;
+$ip-addon-default-width: $default-label-container-width;
+$ip-formcontrol-default-width: $default-data-container-width;
+$ip-control-default-width: $default-label-container-width+$default-data-container-width;
+$ip-default-border-radius: $default-border-radius;
+$ip-formcontrol-default-border: $default-border;
+$ip-controls-default-height: $default-row-height;
+$ip-control-default-width: ($default-label-container-width + $default-data-container-width);
+$ip-control-default-width: ($default-label-container-width + $default-data-container-width);
+/*Help Panel*/
+$help-default-width: $default-control-width;
+$help-icon-size: 24px;
+$help-color: #0f0;
+$help-font-size: 12px;
+$help-vertical-padding: 2px;
+$help-bottom-margin: 5px;
+$help-top-margin: 5px;
+/*Textbox*/
+$tb-default-height: $default-row-height;
+$tb-default-colour: $default-theme-colour;
+$tb-default-border-width: $default-border-width;
+$tb-default-border-colour: $default-border-colour;
+$tb-default-border-style: $default-border-style;
+$tb-default-border-radius: $default-border-radius;
+$tb-default-label-width: $default-label-container-width;
+$tb-label-default-background: $default-light-background;
+$tb-default-data-width: $default-data-container-width;
+$tb-default-width: $default-control-width;
+$tb-default-border: $tb-default-border-width $tb-default-border-style $tb-default-border-colour;
+/*List Input*/
+$list-input-button-font-size: 14px;
+$list-input-button-width: 75px;
+$list-input-button-spacing-left: 10px;
+$list-input-button-height: $ip-controls-default-height;
+$list-input-button-container-height: $list-input-button-height;
+$list-input-ip-width: ($ip-addon-default-width - $list-input-button-width - $list-input-button-spacing-left);
+$list-input-data-width: ($default-data-container-width - $list-input-button-width - $list-input-button-spacing-left);
+$list-textbox-data-width: ($ip-addon-default-width - $list-input-button-width - $list-input-button-spacing-left);
+/*Help Control*/
+/*Warning Panel*/
+$wp-default-width: ($default-label-container-width + $default-data-container-width);
+$wp-default-font-size: 13px;
+$wp-default-height: 27px;
+$wp-top-offset: ($wp-default-height * 0.61);
+/*Requestor modal*/
+$modal-default-base-colour: lighten($default-theme-colour, 40%);
+$modal-default-background: $modal-default-base-colour;
+$modal-default-height: 150px;
+$modal-default-width: 300px;
+$modal-internal-border-colour: darken($modal-default-base-colour, 15%);
+$modal-external-border-colour: lighten($modal-default-base-colour, 10%);
+$modal-external-border: 2px solid $modal-external-border-colour;
+$modal-default-border-radius: 8px;
+$modal-default-font-size: 12px;
+$modal-title-font-size: 14px;
+$modal-body-font-size: 12px;
+$modal-title-height: 20px;
+$modal-title-padding: 1px;
+$modal-footer-padding: 3px;
+$modal-footer-height: 40px;
+$modal-body-height: ($modal-default-height - (($modal-title-height + $modal-title-padding) + ($modal-footer-height + $modal-footer-padding)));
+$modal-button1-background: #5f5;
+$modal-button2-background: #f55;
+$modal-button1-border-color: darken($modal-button1-background, 40%);
+$modal-button2-border-color: darken($modal-button2-background, 40%);
+$modal-button1-forground: #000;
+$modal-button2-forground: #fff;
+/*Data Table*/
+$dt-default-border: 1px solid $default-border-colour;
+$dt-default-cell-padding: 5px;
+$dt-default-header-background: lighten($default-background-colour, 10%);
+$dt-min-row-height: 30px;
+$dt-selected-row: #55f;
+/*AS Header*/
+$header-border-colour: $default-border-colour;
+$header-height: 65px;
+$header-app-font-size: 36px;
+$header-title-font-size: 22px;
+/*Splash screen*/
+$ss-font-size: 14px;
+$ss-width: 200px;
+$ss-height: 150px;
+$ss-border-radius: 5px;
+$ss-border-width: 3px;
+/*Glower*/
+$glow-colour: red;
+$glow-border-colour: #999;
+/*Icon panel*/
+$test-border: 1px dashed #f00;
+$icon-panel-label-font-size: 10px;
+$icon-panel-height: 100px;
+$icon-panel-width: 100px;
+$icon-panel-label-colour: #000;
+$icon-panel-background-colour: #fff;
+$icon-panel-icon-colour: #000;
+$icon-panel-value-colour: #000;
+$icon-panel-border-colour: #999;
+$icon-panel-border-radius: 15px;
+/*Panelled Buttons*/
+$sb-default-width: 120px;
+$sb-default-height: 120px;
+$sb-default-horiz-spacing: 10px;
+$sb-default-vert-spacing: 10px;
+$sb-default-border: $default-border;
+$sb-button-border-width: 2px;
+$sb-button-active-colour: #0ff;
+$sb-button-hover-colour: #ff0;
+$sb-button-font-size: 10px;
+/*Collapsable panel*/
+$cp-header-font-size: 20px;
+$cp-header-row-height: 15px;
+$cp-base-border-colour: $default-border-colour;
+$cp-base-panel-background: lighten($default-theme-colour, 45%);
+/*Social Media*/
+$sm-base-back: #fff;
+$sm-icon-colour: #00a;
+$sm-icon-hover: #00f;
+$sm-border-colour: #aaa;

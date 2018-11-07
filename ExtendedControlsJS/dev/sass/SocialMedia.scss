@@ -1,0 +1,52 @@
+@import "Theme.scss";
+
+.social-media-container {
+    background: $sm-base-back;
+    border-radius: 5px;
+    border: 1px solid $sm-border-colour;
+    height: 43px !important;
+    padding: 0;
+    padding-left: 5px;
+    padding-top: 5px;
+    float: right;
+    max-width: 170px;
+
+    .social-media-standalone {
+        border-radius: 5px;
+
+        &.hide-title {
+            .title {
+                display: none !important;
+            }
+        }
+
+        .icon {
+            margin-left: 5px;
+            margin-right: 5px;
+            background: $sm-base-back;
+            color: $sm-icon-colour;
+            font-size: 32px;
+
+            &.fa-linkedin {
+                color: #4875B4;
+            }
+
+            &.fa-facebook {
+                color: #3B5998;
+            }
+
+            &.fa-twitter {
+                color: #33CCFF;
+            }
+
+            &.fa-google-plus {
+                color: #C63D2D;
+            }
+
+            &:hover {
+                color: $sm-icon-hover;
+                cursor: pointer;
+            }
+        }
+    }
+}

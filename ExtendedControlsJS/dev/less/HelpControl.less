@@ -1,0 +1,50 @@
+@import "Defaults.less";
+.help-control {
+    .set-control-width(@help-default-width);
+    .help-icon-container {
+        border-radius: 50%;
+        position: relative;
+        display: inline-block;
+        max-height: 0;
+        width: (@help-font-size * 2) - 2px;
+        margin-left: (@ip-formcontrol-default-width + @ip-addon-default-width) + 5px;
+        top: -@ip-controls-default-height + 2px;
+        &:hover {
+            cursor: pointer;
+            .fa.fa-question-circle {
+                color: rgb(255, 123, 0);
+                border-radius: 50%;
+            }
+        }
+        .fa.fa-question-circle {
+            &:hover {
+                cursor: pointer;
+            }
+            font-size: @help-icon-size;
+            left: -3px;
+        }
+    }
+}
+
+.help-panel {
+    .set-control-width(@ip-control-default-width);
+    font-size: @help-font-size;
+    font-weight: bold;
+    line-height: @help-font-size;
+    height: @help-font-size + (@help-vertical-padding * 3);
+    padding-top: @help-vertical-padding;
+    padding-bottom: (@help-vertical-padding);
+    border: 1px solid darken(@help-color, 25%);
+    border-radius: 5px;
+    color: darken(@help-color, 20%);
+    text-align: center;
+    margin-top: @help-top-margin;
+    margin-bottom: 5px;
+    background: lighten(@help-color, 20%);
+    &.show {
+        display: block !important;
+    }
+    &.hide {
+        display: none !important;
+    }
+}

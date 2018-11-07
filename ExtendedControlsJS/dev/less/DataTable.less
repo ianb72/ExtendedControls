@@ -1,0 +1,144 @@
+@import "Defaults.less";
+@pagination-control-width: 340px;
+.ec-data-table {
+    min-width: 300px;
+    .ec-filter-input-container {
+        margin-bottom: 10px;
+        text-align: right;
+        min-width: 300px;
+        label {
+            margin-right: 10px;
+        }
+        input[type=text] {
+            border-radius: @default-border-radius;
+            border: @dt-default-border;
+            padding-left: 2px;
+        }
+    }
+    .ec-data-table-inner {
+        min-width: @pagination-control-width;
+        tr {
+            &.selected {
+                border: 2px solid @dt-selected-row;
+            }
+            td {
+                .ec-data-input {
+                    display: none;
+                    border: none;
+                }
+            }
+            &.new-row,
+            &.edit-row {
+                height: @dt-min-row-height;
+                .ec-data-input {
+                    max-height: @dt-min-row-height - 2px;
+                    display: block;
+                }
+                .ec-data-value {
+                    display: none;
+                }
+            }
+        }
+    }
+    td,
+    th {
+        min-height: @dt-min-row-height  !important;
+        height: @dt-min-row-height;
+        border: @dt-default-border;
+        padding: @dt-default-cell-padding;
+    }
+    th {
+        background: @dt-default-header-background;
+        &.sorted {
+            background: lighten(@dt-default-header-background, 10%) !important;
+            icon {
+                margin-left: 5px;
+            }
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &.fixed-table-width {
+        table {
+            min-width: 700px;
+            max-width: 700px;
+        }
+    }
+    &.fixed-col-width {
+        td,
+        th {
+            min-width: 100px;
+            max-width: 100px;
+            overflow-x: hidden;
+        }
+    }
+    @pagination-display-element-width: 40px;
+    @pagination-display-element-height: 30px;
+    .ec-datatable-pagination-container {
+        margin-top: 10px;
+        height: (@pagination-display-element-height + 12px);
+        width: (@pagination-display-element-width * 7) + 60;
+        border: @dt-default-border;
+        border-radius: @default-border-radius;
+        padding: 5px !important;
+        .btn,
+        .page-number {
+            width: @pagination-display-element-width;
+            height: @pagination-display-element-height;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .page-number {
+            border-radius: @default-border-radius;
+            display: inline-block;
+            border: @dt-default-border;
+            vertical-align: middle;
+            text-align: center;
+            padding-top: 5px;
+        }
+        .btn-pagination {
+            .disabled {
+                background: #666;
+            }
+        }
+        .pg-text {
+            width: @pagination-display-element-width - 25;
+            border: none;
+            text-align: center;
+            padding-top: 5px;
+        }
+    }
+    @control-panel-width: 100px;
+    .ec-datatable-controlpanel {
+        min-width: 300px;
+        height: 25px;
+        margin-bottom: 2px;
+        float: right;
+        padding-top: 1px;
+        .btn {
+            width: 21px;
+            height: 21px;
+            border: @default-border;
+            padding: 0;
+        }
+        .ec-left-buttons {
+            float: left;
+            padding: 0;
+            .ec-btn-datatable-save,
+            .ec-btn-datatable-edit {
+                width: auto;
+                padding: 0 5px 0 5px;
+            }
+            .ec-btn-datatable-save {
+                margin-right: 5px;
+            }
+        }
+        .ec-right-buttons {
+            .ec-btn-datatable-add {
+                margin-left: 5px;
+            }
+            float: right;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.glower {
+    background-color: #ccc;
+    border: 1px solid transparent;
+    -webkit-transition: border 0.2s linear, box-shadow 0.2s linear;
+    -moz-transition: border 0.2s linear, box-shadow 0.2s linear;
+    transition: border 0.2s linear, box-shadow 0.2s linear;
+    &.glow {
+        border-color: $glow-colour;
+        -webkit-box-shadow: 0 0 5px $glow-colour;
+        -moz-box-shadow: 0 0 5px $glow-colour;
+        box-shadow: 0 0 5px $glow-colour;
+    }
+    &.glowoff {
+        border: 1px solid $glow-border-colour;
+    }
+}

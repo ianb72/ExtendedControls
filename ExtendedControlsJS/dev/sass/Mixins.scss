@@ -1,0 +1,18 @@
+/*Mixins*/
+
+@mixin set-control-width($width) {
+    max-width: $width !important;
+    min-width: $width !important;
+    width: $width !important;
+}
+
+@mixin restore-border-radius($border-radius) {
+    border-top-left-radius: $border-radius !important;
+    border-bottom-left-radius: $border-radius !important;
+    border-top-right-radius: $border-radius !important;
+    border-bottom-right-radius: $border-radius !important;
+}
+
+@mixin testborder($colour) {
+    border: 1px dashed $colour;
+}

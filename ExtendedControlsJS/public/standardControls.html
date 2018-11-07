@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="content/ExtendedControls.css" />
+    <link rel="stylesheet" type="text/css" href="http://localhost:10001/content/ASStandardStyles/ASStandardStyles.css" />
+    <link rel="stylesheet" type="text/css" href="content/standardControlsPage.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+
+</head>
+
+<body>
+    <div class="as-header" apptitle="Standard Controls" homeurl="http://localhost:10000"></div>
+
+    <div class="container container-fluid">
+        <div class="row">
+            <u>
+                <h3>General</h3>
+            </u>
+            <div class="col-sm-3">
+                <div class="row">
+                    <i>Label</i>
+                    <br />
+                    <label>Label element</label>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="row">
+                    <i>Article</i>
+                    <br />
+                    <article>Artcle element</article>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="row">
+                    <i>b</i>
+                    <br />
+                    <b>b element</b>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="row">
+                    <i>span</i>
+                    <br />
+                    <span>span element</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="row">
+                    <i>strong</i>
+                    <br />
+                    <strong>strong element</strong>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <u>
+                <h3>Input</h3>
+            </u>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="row">
+                        <i>Standard input control - type="text"</i>
+                    </div>
+                    <div class="row">
+                        <label>Text input</label>
+                        <input type="text" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="row">
+                        <i>Standard input control - type="submit"</i>
+                    </div>
+                    <div class="row">
+                        <input type="submit" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="row">
+                        <i>Standard input control - type="button"</i>
+                    </div>
+                    <div class="row">
+                        <input type="button" value="Button" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="row">
+                        <i>Standard input control - type="checkbox"</i>
+                    </div>
+                    <div class="row">
+                        <input type="checkbox" value="Checkbox" /> Checkbox
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="row">
+                        <i>Standard input control - type="color"</i>
+                    </div>
+                    <div class="row">
+                        <input type="color" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="row">
+                        <i>Standard input control - type="date"</i>
+                    </div>
+                    <div class="row">
+                        <input type="date" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <u>
+                <h3>Bootstrap controls</h3>
+            </u>
+            <div class="col-sm-4">
+                <div class="row">
+                    <i>btn btn-default red</i>
+                </div>
+                <div class="row">
+                    <div class="btn btn-default red">Default button - red</div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <u>
+                <h3>Form controls</h3>
+            </u>
+            <h4>Standard bootstrap form</h4>
+            <form>
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="password" class="form-control" id="pwd">
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox"> Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <hr class="light" />
+            <h4>Inline bootstrap form</h4>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="emailinline">Email address:</label>
+                    <input type="email" class="form-control" id="emailinline">
+                </div>
+                <div class="form-group">
+                    <label for="pwdinline">Password:</label>
+                    <input type="password" class="form-control" id="pwdinline">
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox"> Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+<script src="scripts/polyfill.js"></script>
+<script src="content/ExtendedControls_IE.js"></script>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+    <title>Extended Controls Tests</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="content/ExtendedControls.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="http://ed-crn-01:8088/content/ASStandardStyles.css" /> -->
+    <link rel="stylesheet" type="text/css" href="content/extendedControlsPage.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+
+    <script src="scripts/koModel.js"></script>
+    <script src="scripts/codeText.js"></script>
+    <script src="scripts/extendedControlsPage.js"></script>
+</head>
+
+<body>
+    <div class="ec-header" pagetitle="Page Title" apptitle="App Title" homeurl="/index.html"></div>
+    <div class="col-sm-7 control-elements">
+        <div class="row panel-header control-panel">
+            <div class="btn btn-default btn-show-all">Show/Hide All</div>
+        </div>
+        <div class="panel-collapse" paneltitle="Page Header" panelnumber="17">
+            <div class="ec-header"></div>
+        </div>
+        <div class="panel-collapse image-captcha" paneltitle="Image Captcha" panelnumber="19">
+            <div id="imagecaptcha"></div>
+        </div>
+        <div class="panel-collapse" paneltitle="Captcha" panelnumber="18">
+            <div class="ec-captcha"></div>
+        </div>
+        <div class="panel-collapse" paneltitle="Button Group" panelnumber="0">
+            <div id="buttonPanelTest" class="grouped-buttons">
+                <div class="inline" id="button1" btntitle="Button 1" icon="fa fa-3x fa-user" text="1"></div>
+                <div class="inline" id="button2" btntitle="Button 2" icon="fa fa-3x fa-home" text="2"></div>
+                <div class="inline" id="button3" btntitle="Button 3" icon="fa fa-3x fa-home" text="3"></div>
+                <div class="inline" id="button4" btntitle="Button 4" icon="fa fa-3x fa-building-o" text="4"></div>
+                <div class="inline" id="button5" btntitle="Button 5" icon="fa fa-3x fa-bed" text="5"></div>
+            </div>
+        </div>
+        <div class="panel-collapse" paneltitle="Busy Box" panelnumber="1">
+            <div id="bbTest"></div>
+        </div>
+        <div class="panel-collapse" paneltitle="BoolDD" panelnumber="2">
+            <div id="boolDDTest"></div>
+        </div>
+        <div class="panel-collapse" paneltitle="Data Table" panelnumber="3">
+            <div class="data-table-container">
+                <div class="ec-data-table" id="testDataTable"></div>
+            </div>
+        </div>
+        <div class="panel-collapse" paneltitle="Formatted Select" panelnumber="4">
+            <div class="formatted-select-container">
+                <select id="formattedSelectTest">
+                    <option>Test1</option>
+                    <option>Test2</option>
+                    <option>Test3</option>
+                </select>
+            </div>
+        </div>
+        <div class="panel-collapse" paneltitle="Formatted Input" panelnumber="5">
+            <label>Currency</label><input class="formatted-currency" id="formattedCurrencyTest" /><br />
+            <label>Date</label><input class="formatted-date" id="formattedDateTest" /></div>
+        <div class="panel-collapse" paneltitle="Help Control" panelnumber="6">
+            <div id="helpcontrolTest">Help</div>
+        </div>
+        <div class="panel-collapse" paneltitle="Input Panel" panelnumber="7">
+            <div id="inputPanelTest"></div>
+        </div>
+        <div class="panel-collapse" paneltitle="List input" panelnumber="8">
+            <div id="listInputTest"></div>
+        </div>
+        <div class="panel-collapse" paneltitle="Modal input" panelnumber="9">
+            <div id="modalInputButton" class="btn btn-default">Show Input Modal</div>
+            <div id="modalInputTest"></div>
+        </div>
+        <div class="panel-collapse" paneltitle="Modal requestor" panelnumber="10">
+            <div id="modalRequestorButton" class="btn btn-default">Show Modal Requestor</div>
+            <div id="modalRequestorTest"></div>
+        </div>
+        <div class="panel-collapse" paneltitle="Text box" panelnumber="11">
+            <div id="textBoxTest"></div>
+        </div>
+        <div class="panel-collapse" paneltitle="Warning Panel" panelnumber="12">
+            <div id="warningPanelError"></div>
+            <div id="warningPanelWarning"></div>
+            <div id="warningPanelInfo"></div>
+        </div>
+        <div class="panel-collapse" paneltitle="Glower" showhandler="glowershow()" hidehandler="glowerhide()"
+            panelnumber="13">
+            <div id="glowerTest" class="glower glow-test"></div>
+        </div>
+        <div class="panel-collapse" paneltitle="Busy splash" panelnumber="14">
+            <div id="busyTestButton" class="btn btn-default">Cick to show busy screen</div>
+        </div>
+        <div class="panel-collapse" paneltitle="Help Modal" panelnumber="15">
+            <div id="helpModalButton" class="btn btn-default">Click to show help modal</div>
+        </div>
+        <div class="panel-collapse" paneltitle="Show/Hide button" panelnumber="16">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div id="showHideButton" target="showHideTest">Show Hide Test</div>
+                </div>
+                <div class="col-sm-8">
+                    <div id="showHideTest" class="show-hide-test">Show hide test</div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-collapse" paneltitle="Modal Panel" panelnumber="20">
+            <div id="modalPanelButton" class="btn btn-default">Click to show modal panel</div>
+        </div>
+    </div>
+    <div class="col-sm-5 control-code-output">
+        <h3 data-bind="text: vm.CurrentControl"></h3>
+        <div class="btn btn-default btn-additional-help">Open help</div>
+        <hr />
+        <h5>HTML</h5>
+        <pre><code data-language="html" data-bind="text: vm.ElementHTML"></code></pre>
+        <h5>Javascript</h5>
+        <pre><code data-language="javascript" data-bind="text: vm.ElementJavascript"></code></pre>
+    </div>
+
+    <div class="ec-modal-container" id="testHelpModal"></div>
+    <div class="ec-modal-container" id="testModalPanel"></div>
+    <div class="ec-modal-container" id="elementHelpModal"></div>
+    <textarea class="extended-clipboard"></textarea>
+</body>
+
+</html>
+<script src="scripts/polyfill.js"></script>
+<script src="content/ExtendedControls_IE.js"></script>

@@ -1,0 +1,12 @@
+@import "Defaults.scss";
+@import "Common.scss";
+.ec-input-modal {
+    @include modal-base;
+    .input-container {
+        padding: 10px;
+        padding-top: 20px;
+        input {
+            width: 100%;
+        }
+    }
+}

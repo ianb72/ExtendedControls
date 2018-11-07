@@ -1,0 +1,100 @@
+/*AS Header*/
+
+@import "Defaults.scss";
+@import "Theme.scss";
+
+.ec-header {
+    .row {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+.header-row {
+    min-width: 0 !important;
+    height: $header-height;
+    border-bottom: 3px solid $base-standard-dark;
+    padding-bottom: 5px;
+
+    .logo-main {
+        &.has-link {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .logo-container {
+        height: $header-height;
+    }
+
+    .title-container {
+        height: $header-height;
+    }
+
+    .social-media-container {
+        height: $header-height;
+    }
+
+    .header-content {
+        height: 100%;
+        text-align: center;
+        min-width: 0 !important;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 5px;
+
+        .header-app-title {
+            line-height: 30px;
+            font-size: $header-app-font-size;
+            font-weight: bold;
+            color: $base-standard-dark;
+        }
+
+        .header-page-title {
+            font-size: $header-title-font-size;
+            color: $base-standard-dark;
+        }
+
+        .social-media-standalone {
+            font-size: 30px;
+
+            &.hide-title {
+                .title {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .social-media-container {
+        height: 35px !important;
+    }
+
+    .header-app-title {
+        max-width: 300px;
+        margin-left: 25%;
+        font-size: 24px !important;
+    }
+
+    .social-media-standalone {
+        .icon {
+            font-size: 24px !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 845px) {
+    .social-media-container {
+        display: none;
+    }
+
+    .header-app-title {
+        display: inline;
+        max-width: 200px;
+        margin-left: 25%;
+        font-size: 18px !important;
+    }
+}

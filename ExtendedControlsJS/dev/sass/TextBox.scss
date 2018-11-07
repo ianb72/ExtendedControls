@@ -1,0 +1,47 @@
+@import "Defaults.scss";
+/*Textbox*/
+
+.textbox {
+    @include set-control-width($tb-default-width);
+    height: $tb-default-height !important;
+    .textbox-label {
+        min-width: $tb-default-label-width !important;
+        max-width: $tb-default-label-width !important;
+        width: $tb-default-label-width !important;
+        height: $tb-default-height !important;
+        border: $tb-default-border;
+        border-radius: $tb-default-border-radius;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        background: $tb-label-default-background;
+        padding: 6px;
+        padding-top: 10px;
+        float: left;
+        text-align: center;
+    }
+    .textbox-text {
+        min-width: $tb-default-data-width !important;
+        max-width: $tb-default-data-width !important;
+        left: $tb-default-label-width;
+        height: $tb-default-height !important;
+        border: $default-border;
+        border-radius: $tb-default-border-radius;
+        border-left: none;
+        padding: 10px;
+        font-weight: normal;
+        label {
+            font-weight: normal;
+        }
+        @include flat-left-border;
+    }
+    &.no-label {
+        .textbox-label {
+            display: none;
+        }
+        .textbox-text {
+            @include set-control-width($tb-default-width);
+            border: $default-border;
+            @include restore-border-radius($tb-default-border-radius);
+        }
+    }
+}

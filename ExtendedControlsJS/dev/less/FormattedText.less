@@ -1,0 +1,17 @@
+.formatted-input-container {
+    .formatted-input-data,
+    .formatted-input-text {
+        .set-control-width(@ft-input-default-width);
+        border: @ft-input-default-border;
+        height: @ft-input-default-height;
+        padding: 0 !important;
+    }
+    .formatted-input-data {
+        font-size: @ft-text-default-font-size;
+        display: none;
+    }
+    .formatted-input-text {
+        font-size: @ft-text-default-font-size;
+        padding-top: (-@ft-text-default-font-size) + @ft-text-top-offset  !important;
+    }
+}

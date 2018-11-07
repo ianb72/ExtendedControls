@@ -1,0 +1,50 @@
+/*Input Panel*/
+
+$help-icon-size: 32px;
+$help-top-margin: 2px;
+/*Input Panel*/
+
+.input-panel {
+    @include set-control-width($ip-control-default-width);
+    .input-group-addon {
+        max-height: $ip-controls-default-height;
+        height: $ip-controls-default-height;
+        border: $ip-addon-default-border;
+        border-radius: $ip-default-border-radius;
+        background: $ip-addon-default-background;
+        padding: 7px 10px 5px 10px;
+        max-width: $ip-addon-default-width !important;
+        width: $ip-addon-default-width !important;
+        @include flat-right-border;
+    }
+    .form-control {
+        max-width: $ip-formcontrol-default-width !important;
+        min-width: $ip-formcontrol-default-width !important;
+        border: $ip-formcontrol-default-border;
+        border-radius: $ip-default-border-radius !important;
+        border-left: none;
+        max-height: $ip-controls-default-height !important;
+        height: $ip-controls-default-height !important;
+        @include flat-left-border;
+    }
+    textarea.form-control {
+        height: auto !important;
+        max-height: none !important;
+        min-height: none !important;
+    }
+    .formatted-select {
+        max-width: $ip-formcontrol-default-width !important;
+        width: $ip-formcontrol-default-width !important;
+        height: $ip-controls-default-height;
+        border-left: none;
+        @include flat-left-border;
+        .selection-items {
+            max-width: ($ip-formcontrol-default-width + 1px) !important;
+            width: ($ip-formcontrol-default-width + 1px) !important;
+        }
+        .selected-item {
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+    }
+}
